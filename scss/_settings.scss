@@ -117,8 +117,8 @@ $black       : #000000;
 
 // We use these as default colors throughout
 // $primary-color: #65E0CB;
-$primary-color: #50E3C2;
-$secondary-color: #65CAE0;
+$primary-color: #E688F9;
+$secondary-color: #88F9F0;
 $wet-asphalt: #34495E;
 $dark-gray: #696969;
 $medium-gray: #C2C0C0;
@@ -813,16 +813,21 @@ $h6-font-size: 1rem;
 
 // $include-html-off-canvas-classes: $include-html-classes;
 
-$tabbar-bg: $oil;
+$tabbar-bg: $primary-color;
 $tabbar-height: rem-calc(45);
 $tabbar-icon-width: $tabbar-height;
 $tabbar-line-height: $tabbar-height;
-$tabbar-color: $primary-color;
+$tabbar-color: white;
 $tabbar-middle-padding: 0 rem-calc(10);
 
+.tab-bar h1{
+	color: white !important;
+}
+
+
 // Off Canvas Divider Styles
-$tabbar-right-section-border: solid 1px scale-color($tabbar-bg, $lightness: 13%);
-$tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
+$tabbar-right-section-border: none;
+$tabbar-left-section-border: none;
 
 // Off Canvas Tab Bar Headers
 $tabbar-header-color: $primary-color;
@@ -856,7 +861,7 @@ $off-canvas-back-hover-border-top: 1px solid scale-color($off-canvas-label-bg, $
 $off-canvas-back-hover-border-bottom: none;
 
 // Off Canvas Menu Icon Variables
-$tabbar-menu-icon-color: $primary-color;
+$tabbar-menu-icon-color: white;
 $tabbar-menu-icon-hover: scale-color($tabbar-menu-icon-color, $lightness: -30%);
 
 $tabbar-menu-icon-text-indent: rem-calc(35);
@@ -1530,7 +1535,7 @@ $menu-slide: "transform 500ms ease";
 	.bg {
 		position: absolute;
 		z-index: -1000;
-		background: url(bg2.jpg) no-repeat center center fixed; 
+		// background: url(bg.jpg) no-repeat center center fixed; 
 		background-color: white;
 	 	-webkit-background-size: cover;
 	 	-moz-background-size: cover;
@@ -1548,15 +1553,20 @@ $menu-slide: "transform 500ms ease";
 		height: 20%;
 		margin-top: -10%;
 		text-align: center;
-		color: white;
-		h1, h3 {
+		color: $primary-color;
+		h1 {
 			font-weight: bold;
-			color: white;
+			color: $primary-color;
+			font-size: $h1-font-size*3;
+		}
+		h3 {
+			font-weight: bold;
+			color: $primary-color;
 		}
 		a {
-			color:white;
+			color:$primary-color;
 			&:hover {
-				color: $primary-color;
+				color: $secondary-color;
 			}
 		}
 		.arrow {
@@ -1653,6 +1663,10 @@ $menu-slide: "transform 500ms ease";
 	  height: 100%; overflow:scroll;
 	  -webkit-overflow-scrolling: touch;
 	}
+
+	.content {
+		padding-top: $tabbar-height;
+	}
 }
 // OFFCANVAS NAV BAR FIX END
 
@@ -1678,49 +1692,10 @@ $menu-slide: "transform 500ms ease";
 	z-index: 999;
 }
 
-// #fixed-height{
-// 	min-height: 300px;
-// 	margin-bottom: 20px;
-// }
-
-// #pic0 {
-// 	min-height: 400px;
-// 	background: url(0.jpg) no-repeat center; 
-// }
-
-// #pic1 {
-// 	min-height: 400px;
-// 	background: url(1.jpg) no-repeat center; 
-// }
-
-// #pic2 {
-// 	min-height: 400px;
-// 	background: url(2.jpg) no-repeat center; 
-// }
-// #pic3 {
-// 	min-height: 400px;
-// 	background: url(3.jpg) no-repeat center; 
-// }
-// #pic4 {
-// 	min-height: 400px;
-// 	background: url(4.jpg) no-repeat center; 
-// }
-// #pic5 {
-// 	min-height: 400px;
-// 	background: url(5.jpg) no-repeat center; 
-// }
-// #pic6 {
-// 	min-height: 400px;
-// 	background: url(6.jpg) no-repeat center; 
-// }
-// #pic7 {
-// 	min-height: 400px;
-// 	background: url(7.jpg) no-repeat center; 
-// }
-// #pic8 {
-// 	min-height: 400px;
-// 	background: url(8.jpg) no-repeat center; 
-// }
-
 .no-js #loading_page { display: none;  }
 .js .loading_page { display: block; background-color: white; position: absolute; left: 0px; top: 0px; height: 100%; width: 100%; z-index: 99999;}
+
+.rotate {
+	color: $secondary-color;
+	text-transform: uppercase;
+}
