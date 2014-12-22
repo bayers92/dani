@@ -27,7 +27,7 @@
 	// Wait for window load
 	$(window).load(function() {
 			// Animate loader off screen
-			$("#loading_page").delay(000).animate({
+			$("#loading_page").delay(2000).animate({
 				top: -1000
 			}, 400);
 		});
@@ -40,18 +40,7 @@
 		<img src="img/preloader.gif" id="loader">
 	</div>
 
-	<!-- START HOMEPAGE -->
-	<div class = "full-page show-for-medium-up">
-		<div class = "bg"></div>
-		<div class = "home-title">
-			<a href="#home">
-				<!-- <h1>Danielle Ayers</h1> -->
-				<h1> I LOVE <br/><span class="rotate">teaching, elephants, arts & crafts, pizza</span></h1>
-			</a>
-			<!-- <div class = "arrow"><a href="#about"><i class="fa fa-angle-double-down fa-4x"></i></a> </div> -->
-		</div>
-	</div>
-	<!-- END HOMEPAGE -->
+<!-- Full Page was here -->
 
 	<div class="off-canvas-wrap fixed" data-offcanvas>
 		<div class="inner-wrap">
@@ -82,6 +71,22 @@
 			<!-- END MOBILE NAV OFFCANVAS -->
 
 			<section class="main-section">
+	<!-- START HOMEPAGE -->
+	<div class = "full-page">
+		<div class = "bg"></div>
+		<div class = "home-top-bar"><a href="">Danielle Ayers</a></div>
+<!-- 		<div class = "home-top-picture">
+			<img src="img/dani1.jpg" id="top-bar-image">
+		</div> -->
+		<div class = "home-title">
+			<a href="#home">
+				<!-- <h1>Danielle Ayers</h1> -->
+				<h1> I LOVE<br/><span class="rotate">sharing, teaching, elephants, tutoring, pizza, minions</span></h1>
+			<div class = "arrow"><a href="#home"><i class="fa fa-angle-double-down fa-4x"></i></a> </div>
+		</div>
+	</div>
+	<!-- END HOMEPAGE -->
+
 				<a name = "home"></a>
 				<div class = "show-for-medium-up">
 
@@ -89,8 +94,9 @@
 					<div data-magellan-expedition="fixed">
 						<dl class="sub-nav">
 							<dd data-magellan-arrival="about"><a href="#about">About</a></dd>
-							<dd data-magellan-arrival="experience"><a href="#travel">Experience</a></dd>
+							<dd data-magellan-arrival="experience"><a href="#experience">Experience</a></dd>
 							<dd data-magellan-arrival="blog"><a href="#blog">Blog</a></dd>
+							<dd><a href="mailto:Danielle.c.ayers@gmail.com">Contact</a></dd>
 						</dl>
 					</div>
 				</div>
@@ -110,17 +116,12 @@
 						<div class ="small-12 medium-8 medium-pull-4 columns">
 							<h3 class = "header"> About Me</h3>
 							<p>I am currently an MBA student on a merit based full scholarship at the <a href="http://www.simon.rochester.edu/index.aspx">Simon School of Business </a>at the University of Rochester. Given my MBA and background in economics and commercial litigation I have cultivated a unique set of leadership and problem solving skills that are relevant and transferrable to the fields of business management and management consulting.</p>
-						</div>
-					</div>
-
-					<div class = "row">
-						<div class = "small-12 small-centered columns">
 							<a href = "Danielle_Ayers.pdf"><i class="fa fa-paperclip fa-2x"></i> &nbsp; View Full Resume </a><br/><br/>
 						</div>
 					</div>
-
 					<div class = "row">
-						<div class = "small-12 small-centered columns">
+						<div class = "small-12 columns">
+							<br/><br/><br/><br/><br/>
 						</div>
 					</div>
 				</div>
@@ -128,38 +129,23 @@
 
 
 
-				<!-- START TRAVEL SECTION -->
+				<!-- START EXPERIENCE SECTION -->
 				<div class = "content section">
-					<a name = "travel" data-magellan-destination="travel"></a>
+					<a name = "experience" data-magellan-destination="experience"></a>
 					<div class = "row">
-						<div class = "small-12 small-centered columns">
-							<h3 class = "center-text header"> World Travel </h3>
-						</div>
-					</div>
-					<div class = "row">
-						<div class = "small-12 small-centered columns">
-							<p>
-							</p> 
-						</div>
-						<br/><br/>
-					</div>
-
-					<div class = "row">
-						<div class = "small-12 columns text-center">
-							<div class="fotorama" data-nav="thumbs">
-								<img src="img/1.jpg" data-fit="contain">
-								<img src="img/2.jpg" data-fit="contain">
-								<img src="img/3.jpg" data-fit="contain">
-								<img src="img/4.jpg" data-fit="contain">
-								<img src="img/5.jpg" data-fit="contain">
-								<img src="img/6.jpg" data-fit="contain">
-								<img src="img/7.jpg" data-fit="contain">
-								<img src="img/8.jpg" data-fit="contain">
+						<div class = "small-12 medium-4 columns">
+							<div class = "pic">
+								<img src="img/about.jpg">
 							</div>
+						</div>
+
+						<div class ="small-12 medium-8 columns">
+							<h3 class = "header"> Experience </h3>
+							<p>I am currently an MBA student on a merit based full scholarship at the <a href="http://www.simon.rochester.edu/index.aspx">Simon School of Business </a>at the University of Rochester. Given my MBA and background in economics and commercial litigation I have cultivated a unique set of leadership and problem solving skills that are relevant and transferrable to the fields of business management and management consulting.</p>
 						</div>
 					</div>
 				</div>
-				<!-- END TRAVEL SECTION -->
+				<!-- END EXPERIENCE SECTION -->
 
 				<!-- START BLOG SECTION -->
 				<div class = "content section">
@@ -169,19 +155,19 @@
 							<h3> Blog </h3>
 						</div>
 						<div class = "small-12 small-centered columns">
-							<h5 class = "header center-text"> Some of my favorite articles from around the web </h5>
+							<h5 class = "header center-text"> Some examples of why I love teaching </h5>
 						</div>
 					</div>
 					<div class = "row">
 						<div class = "small-12 small-centered columns">
-							<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
-								<script type="text/javascript" src="http://timothyhayward.tumblr.com/js"></script>
+							<ul class="small-block-grid-3">
+								<script type="text/javascript" src="http://danitheelephant.tumblr.com/js"></script>
 							</ul>
 						</div>
 					</div>
 					<div class = "row">
 						<div class = "small-12 small-centered columns center-text">
-							<p> <a href="http://timothyhayward.tumblr.com/"> View full blog.. </a> </p>
+							<p> <a href="http://danitheelephant.tumblr.com/"> View full blog.. </a> </p>
 						</div>
 					</div>
 				</div>

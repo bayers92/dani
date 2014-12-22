@@ -4,6 +4,7 @@
 
 //
 
+
 // Table of Contents
 // Foundation Settings
 //
@@ -133,6 +134,9 @@ $light-gray: #F9F6F6;
 
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 $raleway:'Raleway', sans-serif;
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+$pacifico:'Pacifico', cursive;
 
 $body-bg: $white;
 $body-font-color: $wet-asphalt;
@@ -384,7 +388,7 @@ $h6-font-size: 1rem;
 // 03. Block Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-block-grid-classes: $include-html-classes;
+$include-html-block-grid-classes: $include-html-classes;
 // $include-xl-html-block-grid-classes: false;
 
 // We use this to control the maximum number of block grid elements per row
@@ -1535,20 +1539,17 @@ $menu-slide: "transform 500ms ease";
 	.bg {
 		position: absolute;
 		z-index: -1000;
-		// background: url(bg.jpg) no-repeat center center fixed; 
-		background-color: white;
-	 	-webkit-background-size: cover;
-	 	-moz-background-size: cover;
-	 	-o-background-size: cover;
-	 	background-size: cover;
-	 	width: 100%;
-	 	height: 100%;
+		background: -webkit-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
+		background:    -moz-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
+		background:     -ms-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
+		background:      -o-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
+		background:         linear-gradient(-180deg, #E688F9 0%, #E688F9 13%, #F2C3FC 41%, #F6D3FD 64%, #FCEFFE 76%, #FFFFFF 90%);
+	 	width: 100vw;
+	 	height: 100vh;
 	}
 	.home-title {	
-		top: 50%;
-		/*left: 50%;*/
+		top: 30vh;
 		width: 100%;
-		/*margin-left: -25%;*/
 		position: absolute;
 		height: 20%;
 		margin-top: -10%;
@@ -1556,7 +1557,7 @@ $menu-slide: "transform 500ms ease";
 		color: $primary-color;
 		h1 {
 			font-weight: bold;
-			color: $primary-color;
+			color: white;
 			font-size: $h1-font-size*3;
 		}
 		h3 {
@@ -1566,11 +1567,8 @@ $menu-slide: "transform 500ms ease";
 		a {
 			color:$primary-color;
 			&:hover {
-				color: $secondary-color;
+				color: $primary-color;
 			}
-		}
-		.arrow {
-			color: white;
 		}
 		.arrow:hover {
 			-webkit-transition: 1s ease-in-out;
@@ -1582,10 +1580,6 @@ $menu-slide: "transform 500ms ease";
 			-o-transform: translate(0, 1em);
 			-ms-transform: translate(0, 1em);
 			transform: translate(0, 1em);
-			color: $primary-color;
-		}
-		&:hover {
-			color: $primary-color;
 		}	
 	}
 
@@ -1594,54 +1588,76 @@ $menu-slide: "transform 500ms ease";
 
 
 // TUMBLR IMPORT SETTINGS
-.tumblr_posts {
-	width: 100%;
-	position: relative;
-	padding-left: 0.9375rem;
-	padding-right: 0.9375rem;
-	float: left;
-	margin-left: 0 !important;
-	margin-right: 0 !important;
-	text-align: center;
-	list-style:none;
-	list-style-type: none;
-	li {
-		width: 90%;
-		margin-left: auto !important;
-		margin-right: auto !important;
-		padding-top: 25px !important;
-		padding-bottom: 25px !important;
-		border-bottom: thin solid $medium-gray;
-		a {
-			font-size: $h3-font-size;
-			color: $dark-gray !important;
-			&:hover {
-				color: $primary-color !important;
-			}
-		}
-		.tumblr_description {
-			.link_og_blockquote {
-				border: none !important;
-				color: $medium-gray !important;
-				margin-bottom: 0px !important;
-			}
-			p {
-				color: $medium-gray;
-				// font-style: italic;
-			}
-		}
-		img {
+// .tumblr_posts {
+// 	width: 100%;
+// 	position: relative;
+// 	padding-left: 0.9375rem;
+// 	padding-right: 0.9375rem;
+// 	float: left;
+// 	margin-left: 0 !important;
+// 	margin-right: 0 !important;
+// 	text-align: center;
+// 	list-style:none;
+// 	list-style-type: none;
+// 	li {
+// 		// width: 25%;
+// 		// padding-top: 25px !important;
+// 		// padding-bottom: 25px !important;
+// 		// border-bottom: none;
+// 		// float: left;
+// 		a {
+// 			font-size: $h3-font-size;
+// 			color: $dark-gray !important;
+// 			&:hover {
+// 				color: $primary-color !important;
+// 			}
+// 		}
+// 		.tumblr_description {
+// 			.link_og_blockquote {
+// 				border: none !important;
+// 				color: $medium-gray !important;
+// 				margin-bottom: 0px !important;
+// 			}
+// 			p {
+// 				color: $medium-gray;
+// 				// font-style: italic;
+// 			}
+// 		}
+// 		img {
 
-		}
-		.tumblr_caption{
-			p {
-				margin-top: 5px;
-				color: $medium-gray;
-				margin-bottom: 0 !important;
-			}
-		}
+// 		}
+// 		.tumblr_caption{
+// 			p {
+// 				margin-top: 5px;
+// 				color: $medium-gray;
+// 				margin-bottom: 0 !important;
+// 			}
+// 		}
+// 	}
+// }
+
+@import "foundation/components/block-grid"; 
+@media #{$small-only} {
+	.tumblr_posts {
+		@include block-grid(1);
 	}
 }
+
+@media #{$medium-up} {
+	.tumblr_posts {
+		@include block-grid(3);	
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 /* remove scroll bars in Safari */
 .off-canvas-wrap .main-section:-webkit-scrollbar { 
@@ -1698,4 +1714,101 @@ $menu-slide: "transform 500ms ease";
 .rotate {
 	color: $secondary-color;
 	text-transform: uppercase;
+}
+
+
+.home-top-bar {
+	height: $tabbar-height;
+	background-color: $primary-color;
+	font-family: $pacifico !important;
+	color: white;
+	margin-left: 15px;
+	font-size: $h3-font-size;
+	a {
+		color: white;
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+}
+
+.home-top-picture {
+	align-content: center;
+	text-align: center;
+	z-index: 100;
+}
+#top-bar-image {
+	width: 450px;
+}
+
+.tab-bar {
+	h1 {
+		font-family: $pacifico;
+	}
+}
+
+
+@media #{$small-only} {
+	.home-top-bar {
+		text-align: center;
+	}
+	.full-page {
+		margin: 0 0 0 0 !important;
+		padding: 0 0 0 0 !important;
+		top: 0;
+		left: 0;
+		min-height: 100vh;
+		min-width: 100vw;
+		.bg {
+			display: none;
+			position: relative !important;
+			z-index: -1000;
+			background: -webkit-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
+			background:    -moz-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
+			background:     -ms-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
+			background:      -o-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
+			background:         linear-gradient(-180deg, #E688F9 0%, #E688F9 13%, #F2C3FC 41%, #F6D3FD 64%, #FCEFFE 76%, #FFFFFF 90%);
+		        
+		 	width: 100%;
+		 	height: 100%;
+		 	left: 0;
+		 	top: 0;
+		}
+		.home-title {	
+			top: 30%;
+			width: 100%;
+			position: relative !important;
+			height: 20%;
+			margin-top: 40% !important;
+			text-align: center;
+			color: $primary-color;
+			h1 {
+				font-weight: bold;
+				color: $primary-color;
+				font-size: $h1-font-size;
+			}
+			h3 {
+				font-weight: bold;
+				color: $primary-color;
+			}
+			a {
+				margin-top: 50px;
+				color:$primary-color;
+				&:hover {
+					color: $primary-color;
+				}
+			}
+			.arrow:hover {
+				-webkit-transition: 1s ease-in-out;
+				-moz-transition: 1s ease-in-out;
+				-o-transition: 1s ease-in-out;
+				transition: 1s ease-in-out;
+				-webkit-transform: translate(0, 1em);
+				-moz-transform: translate(0, 1em);
+				-o-transform: translate(0, 1em);
+				-ms-transform: translate(0, 1em);
+				transform: translate(0, 1em);
+			}	
+		}
+	}
 }
