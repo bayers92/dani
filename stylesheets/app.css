@@ -42,48 +42,6 @@
 }
 
 /* line 1496, ../scss/_settings.scss */
-.project_box {
-  float: left;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-/* line 1501, ../scss/_settings.scss */
-.project_box:hover {
-  opacity: 0.5;
-}
-/* line 1504, ../scss/_settings.scss */
-.project_box .pic {
-  max-width: 100%;
-  max-height: 100%;
-  margin-bottom: 10px;
-  border-bottom: thin solid #c2c0c0;
-}
-/* line 1511, ../scss/_settings.scss */
-.project_box .description {
-  color: #c2c0c0;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-/* line 1518, ../scss/_settings.scss */
-.pic img {
-  width: 100%;
-  max-height: auto;
-  padding-bottom: 10px;
-}
-
-/* line 1524, ../scss/_settings.scss */
-.smaller-text {
-  font-size: 0.75em;
-}
-
-/* line 1528, ../scss/_settings.scss */
-.larger-text {
-  font-size: 1.05em;
-}
-
-/* line 1532, ../scss/_settings.scss */
 .full-page {
   margin: 0 0 0 0 !important;
   padding: 0 0 0 0 !important;
@@ -92,19 +50,18 @@
   min-height: 100vh;
   min-width: 100vw;
 }
-/* line 1539, ../scss/_settings.scss */
+/* line 1503, ../scss/_settings.scss */
 .full-page .bg {
   position: absolute;
   z-index: -1000;
-  background: -webkit-linear-gradient(-180deg, #e688f9 0%, #f2c3fc 26%, #f6d3fd 37%, #fceffe 61%, white 83%);
-  background: -moz-linear-gradient(-180deg, #e688f9 0%, #f2c3fc 26%, #f6d3fd 37%, #fceffe 61%, white 83%);
-  background: -ms-linear-gradient(-180deg, #e688f9 0%, #f2c3fc 26%, #f6d3fd 37%, #fceffe 61%, white 83%);
-  background: -o-linear-gradient(-180deg, #e688f9 0%, #f2c3fc 26%, #f6d3fd 37%, #fceffe 61%, white 83%);
-  background: linear-gradient(-180deg, #e688f9 0%, #e688f9 13%, #f2c3fc 41%, #f6d3fd 64%, #fceffe 76%, white 90%);
-  width: 100vw;
-  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
-/* line 1550, ../scss/_settings.scss */
+/* line 1514, ../scss/_settings.scss */
 .full-page .home-title {
   top: 30vh;
   width: 100%;
@@ -114,26 +71,26 @@
   text-align: center;
   color: #e688f9;
 }
-/* line 1558, ../scss/_settings.scss */
+/* line 1522, ../scss/_settings.scss */
 .full-page .home-title h1 {
   font-weight: bold;
-  color: white;
+  color: #e688f9;
   font-size: 8.25rem;
 }
-/* line 1563, ../scss/_settings.scss */
+/* line 1527, ../scss/_settings.scss */
 .full-page .home-title h3 {
   font-weight: bold;
   color: #e688f9;
 }
-/* line 1567, ../scss/_settings.scss */
+/* line 1531, ../scss/_settings.scss */
 .full-page .home-title a {
   color: #e688f9;
 }
-/* line 1569, ../scss/_settings.scss */
+/* line 1533, ../scss/_settings.scss */
 .full-page .home-title a:hover {
   color: #e688f9;
 }
-/* line 1573, ../scss/_settings.scss */
+/* line 1537, ../scss/_settings.scss */
 .full-page .home-title .arrow:hover {
   -webkit-transition: 1s ease-in-out;
   -moz-transition: 1s ease-in-out;
@@ -825,7 +782,7 @@ select {
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 1641, ../scss/_settings.scss */
+  /* line 1554, ../scss/_settings.scss */
   .tumblr_posts {
     display: block;
     padding: 0;
@@ -863,7 +820,7 @@ select {
   }
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 1647, ../scss/_settings.scss */
+  /* line 1560, ../scss/_settings.scss */
   .tumblr_posts {
     display: block;
     padding: 0;
@@ -901,36 +858,36 @@ select {
   }
 }
 /* remove scroll bars in Safari */
-/* line 1663, ../scss/_settings.scss */
+/* line 1568, ../scss/_settings.scss */
 .off-canvas-wrap .main-section:-webkit-scrollbar {
   display: none;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 1669, ../scss/_settings.scss */
+  /* line 1574, ../scss/_settings.scss */
   body, html {
     height: 100%;
     width: 100%;
   }
 
-  /* line 1673, ../scss/_settings.scss */
+  /* line 1578, ../scss/_settings.scss */
   .off-canvas-wrap, .inner-wrap {
     height: 100%;
   }
 
-  /* line 1677, ../scss/_settings.scss */
+  /* line 1582, ../scss/_settings.scss */
   .off-canvas-wrap .main-section {
     height: 100%;
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* line 1683, ../scss/_settings.scss */
+  /* line 1588, ../scss/_settings.scss */
   .content {
     padding-top: 2.8125rem;
   }
 }
-/* line 1689, ../scss/_settings.scss */
+/* line 1594, ../scss/_settings.scss */
 #loader {
   position: absolute;
   top: 50%;
@@ -941,7 +898,7 @@ select {
   margin-top: -40px;
 }
 
-/* line 1699, ../scss/_settings.scss */
+/* line 1604, ../scss/_settings.scss */
 #loading_title {
   text-align: center;
   color: #e688f9;
@@ -954,12 +911,12 @@ select {
   z-index: 999;
 }
 
-/* line 1711, ../scss/_settings.scss */
+/* line 1616, ../scss/_settings.scss */
 .no-js #loading_page {
   display: none;
 }
 
-/* line 1712, ../scss/_settings.scss */
+/* line 1617, ../scss/_settings.scss */
 .js .loading_page {
   display: block;
   background-color: white;
@@ -971,78 +928,54 @@ select {
   z-index: 99999;
 }
 
-/* line 1714, ../scss/_settings.scss */
+/* line 1619, ../scss/_settings.scss */
 .rotate {
   color: #88f9f0;
   text-transform: uppercase;
 }
 
-/* line 1720, ../scss/_settings.scss */
+/* line 1625, ../scss/_settings.scss */
 .home-top-bar {
   height: 2.8125rem;
   background-color: #e688f9;
   font-family: "Pacifico", cursive !important;
   color: white;
-  margin-left: 15px;
   font-size: 1.6875rem;
 }
-/* line 1727, ../scss/_settings.scss */
+/* line 1631, ../scss/_settings.scss */
 .home-top-bar a {
   color: white;
+  margin-left: 15px;
 }
-/* line 1729, ../scss/_settings.scss */
+/* line 1634, ../scss/_settings.scss */
 .home-top-bar a:hover {
   color: #88f9f0;
 }
 
-/* line 1735, ../scss/_settings.scss */
+/* line 1640, ../scss/_settings.scss */
 .home-top-picture {
   align-content: center;
   text-align: center;
   z-index: 100;
 }
 
-/* line 1740, ../scss/_settings.scss */
+/* line 1645, ../scss/_settings.scss */
 #top-bar-image {
   width: 450px;
 }
 
-/* line 1745, ../scss/_settings.scss */
+/* line 1650, ../scss/_settings.scss */
 .tab-bar h1 {
   font-family: "Pacifico", cursive;
 }
 
 @media only screen and (max-width: 40em) {
-  /* line 1752, ../scss/_settings.scss */
+  /* line 1657, ../scss/_settings.scss */
   .home-top-bar {
     text-align: center;
   }
 
-  /* line 1755, ../scss/_settings.scss */
-  .full-page {
-    margin: 0 0 0 0 !important;
-    padding: 0 0 0 0 !important;
-    top: 0;
-    left: 0;
-    min-height: 100vh;
-    min-width: 100vw;
-  }
-  /* line 1762, ../scss/_settings.scss */
-  .full-page .bg {
-    display: none;
-    position: relative !important;
-    z-index: -1000;
-    background: -webkit-linear-gradient(-180deg, #e688f9 0%, #f2c3fc 26%, #f6d3fd 37%, #fceffe 61%, white 83%);
-    background: -moz-linear-gradient(-180deg, #e688f9 0%, #f2c3fc 26%, #f6d3fd 37%, #fceffe 61%, white 83%);
-    background: -ms-linear-gradient(-180deg, #e688f9 0%, #f2c3fc 26%, #f6d3fd 37%, #fceffe 61%, white 83%);
-    background: -o-linear-gradient(-180deg, #e688f9 0%, #f2c3fc 26%, #f6d3fd 37%, #fceffe 61%, white 83%);
-    background: linear-gradient(-180deg, #e688f9 0%, #e688f9 13%, #f2c3fc 41%, #f6d3fd 64%, #fceffe 76%, white 90%);
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-  }
-  /* line 1777, ../scss/_settings.scss */
+  /* line 1661, ../scss/_settings.scss */
   .full-page .home-title {
     top: 30%;
     width: 100%;
@@ -1052,39 +985,24 @@ select {
     text-align: center;
     color: #e688f9;
   }
-  /* line 1785, ../scss/_settings.scss */
+  /* line 1669, ../scss/_settings.scss */
   .full-page .home-title h1 {
     font-weight: bold;
     color: #e688f9;
     font-size: 2.75rem;
   }
-  /* line 1790, ../scss/_settings.scss */
+  /* line 1674, ../scss/_settings.scss */
   .full-page .home-title h3 {
     font-weight: bold;
     color: #e688f9;
   }
-  /* line 1794, ../scss/_settings.scss */
-  .full-page .home-title a {
-    margin-top: 50px;
-    color: #e688f9;
-  }
-  /* line 1797, ../scss/_settings.scss */
-  .full-page .home-title a:hover {
-    color: #e688f9;
-  }
-  /* line 1801, ../scss/_settings.scss */
-  .full-page .home-title .arrow:hover {
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-    -webkit-transform: translate(0, 1em);
-    -moz-transform: translate(0, 1em);
-    -o-transform: translate(0, 1em);
-    -ms-transform: translate(0, 1em);
-    transform: translate(0, 1em);
-  }
 }
+/* line 1682, ../scss/_settings.scss */
+.bolder {
+  font-weight: bold;
+  font-size: 125%;
+}
+
 /* line 218, ../bower_components/foundation/scss/foundation/components/_grid.scss */
 .row {
   width: 100%;

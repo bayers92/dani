@@ -1492,42 +1492,6 @@ $menu-slide: "transform 500ms ease";
 	}
 }
 
-// Projects
-.project_box {
-	float: left;
-	width: 100%;
-	max-width: 400px;
-	height: auto;
-	&:hover {
-		opacity: 0.5;
-	}
-	.pic {
-		// float: left;
-		max-width:100%;
-		max-height:100%;
-		margin-bottom: 10px;
-		border-bottom: thin solid $medium-gray;
-	}
-	.description {
-		color: $medium-gray;
-		text-decoration: none;
-		margin-left: 10px;
-	}
-}
-
-.pic img{
-	width: 100%;
-	max-height: auto;
-	padding-bottom: 10px;
-}
-
-.smaller-text {
-	font-size: 0.75em;
-}
-
-.larger-text {
-	font-size: 1.05em;
-}
 
 .full-page {
 	margin: 0 0 0 0 !important;
@@ -1539,13 +1503,13 @@ $menu-slide: "transform 500ms ease";
 	.bg {
 		position: absolute;
 		z-index: -1000;
-		background: -webkit-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
-		background:    -moz-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
-		background:     -ms-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
-		background:      -o-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
-		background:         linear-gradient(-180deg, #E688F9 0%, #E688F9 13%, #F2C3FC 41%, #F6D3FD 64%, #FCEFFE 76%, #FFFFFF 90%);
-	 	width: 100vw;
-	 	height: 100vh;
+		// background: url(bg.jpg) no-repeat center center fixed; 
+	 	-webkit-background-size: cover;
+	 	-moz-background-size: cover;
+	 	-o-background-size: cover;
+	 	background-size: cover;
+	 	width: 100%;
+	 	height: 100%;
 	}
 	.home-title {	
 		top: 30vh;
@@ -1557,7 +1521,7 @@ $menu-slide: "transform 500ms ease";
 		color: $primary-color;
 		h1 {
 			font-weight: bold;
-			color: white;
+			color: $primary-color;
 			font-size: $h1-font-size*3;
 		}
 		h3 {
@@ -1580,61 +1544,10 @@ $menu-slide: "transform 500ms ease";
 			-o-transform: translate(0, 1em);
 			-ms-transform: translate(0, 1em);
 			transform: translate(0, 1em);
-		}	
+		}
 	}
-
 }
 
-
-
-// TUMBLR IMPORT SETTINGS
-// .tumblr_posts {
-// 	width: 100%;
-// 	position: relative;
-// 	padding-left: 0.9375rem;
-// 	padding-right: 0.9375rem;
-// 	float: left;
-// 	margin-left: 0 !important;
-// 	margin-right: 0 !important;
-// 	text-align: center;
-// 	list-style:none;
-// 	list-style-type: none;
-// 	li {
-// 		// width: 25%;
-// 		// padding-top: 25px !important;
-// 		// padding-bottom: 25px !important;
-// 		// border-bottom: none;
-// 		// float: left;
-// 		a {
-// 			font-size: $h3-font-size;
-// 			color: $dark-gray !important;
-// 			&:hover {
-// 				color: $primary-color !important;
-// 			}
-// 		}
-// 		.tumblr_description {
-// 			.link_og_blockquote {
-// 				border: none !important;
-// 				color: $medium-gray !important;
-// 				margin-bottom: 0px !important;
-// 			}
-// 			p {
-// 				color: $medium-gray;
-// 				// font-style: italic;
-// 			}
-// 		}
-// 		img {
-
-// 		}
-// 		.tumblr_caption{
-// 			p {
-// 				margin-top: 5px;
-// 				color: $medium-gray;
-// 				margin-bottom: 0 !important;
-// 			}
-// 		}
-// 	}
-// }
 
 @import "foundation/components/block-grid"; 
 @media #{$small-only} {
@@ -1651,33 +1564,25 @@ $menu-slide: "transform 500ms ease";
 
 
 
-
-
-
-
-
-
-
-
 /* remove scroll bars in Safari */
 .off-canvas-wrap .main-section:-webkit-scrollbar { 
-    display: none; 
+	display: none; 
 }
 // 
 // OFFCANVAS NAV BAR FIX START
 @media #{$small-only} {
 	body,html{
-	    height:100%;
-	    width:100%;
+		height:100%;
+		width:100%;
 	}
 	.off-canvas-wrap,.inner-wrap{
-	    height:100%;   
+		height:100%;   
 	}
 
 	.off-canvas-wrap .main-section
 	{
-	  height: 100%; overflow:scroll;
-	  -webkit-overflow-scrolling: touch;
+		height: 100%; overflow:scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.content {
@@ -1722,10 +1627,10 @@ $menu-slide: "transform 500ms ease";
 	background-color: $primary-color;
 	font-family: $pacifico !important;
 	color: white;
-	margin-left: 15px;
 	font-size: $h3-font-size;
 	a {
 		color: white;
+		margin-left: 15px;
 		&:hover {
 			color: $secondary-color;
 		}
@@ -1753,27 +1658,6 @@ $menu-slide: "transform 500ms ease";
 		text-align: center;
 	}
 	.full-page {
-		margin: 0 0 0 0 !important;
-		padding: 0 0 0 0 !important;
-		top: 0;
-		left: 0;
-		min-height: 100vh;
-		min-width: 100vw;
-		.bg {
-			display: none;
-			position: relative !important;
-			z-index: -1000;
-			background: -webkit-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
-			background:    -moz-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
-			background:     -ms-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
-			background:      -o-linear-gradient(-180deg, #E688F9 0%, #F2C3FC 26%, #F6D3FD 37%, #FCEFFE 61%, #FFFFFF 83%);
-			background:         linear-gradient(-180deg, #E688F9 0%, #E688F9 13%, #F2C3FC 41%, #F6D3FD 64%, #FCEFFE 76%, #FFFFFF 90%);
-		        
-		 	width: 100%;
-		 	height: 100%;
-		 	left: 0;
-		 	top: 0;
-		}
 		.home-title {	
 			top: 30%;
 			width: 100%;
@@ -1791,24 +1675,11 @@ $menu-slide: "transform 500ms ease";
 				font-weight: bold;
 				color: $primary-color;
 			}
-			a {
-				margin-top: 50px;
-				color:$primary-color;
-				&:hover {
-					color: $primary-color;
-				}
-			}
-			.arrow:hover {
-				-webkit-transition: 1s ease-in-out;
-				-moz-transition: 1s ease-in-out;
-				-o-transition: 1s ease-in-out;
-				transition: 1s ease-in-out;
-				-webkit-transform: translate(0, 1em);
-				-moz-transform: translate(0, 1em);
-				-o-transform: translate(0, 1em);
-				-ms-transform: translate(0, 1em);
-				transform: translate(0, 1em);
-			}	
 		}
 	}
+}
+
+.bolder {
+	font-weight: bold;
+	font-size: 125%;
 }
